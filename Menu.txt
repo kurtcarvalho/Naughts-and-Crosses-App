@@ -1,0 +1,195 @@
+local widget = require("widget")
+
+local function handleButtonEvent()
+	
+end
+--New Game Button
+local myRoundedRect = display.newRoundedRect( 235, 450, 100, 50, 12 )
+	myRoundedRect.strokeWidth = 3
+	myRoundedRect:setFillColor( 0.5 )
+	myRoundedRect:setStrokeColor( 1, 0, 0 )
+	display.newRoundedRect(  400, 100, 100, 200, 30 )
+
+
+local button1 = widget.newButton(
+{
+	
+	left = display.contentWidth * 0.45,
+	top = 425, 
+	id = "button1",
+	label = "New Game",
+	onPress = InGameNewGMenuButtonEvent,
+	labelColor = { default={ 1, 1, 1 }, over={ 1, 2, 0 } }
+	
+	
+}
+)
+
+function InGameNewGMenuButtonEvent()
+	NewGame()
+end
+
+--On Pressing Menu Event handler
+local function MenuButtonEvent()
+  mainMenu()
+end
+
+-- In Main Menu Button Rectangle
+local myRoundedRect = display.newRoundedRect( 85, 450, 100, 50, 12 )
+	myRoundedRect.strokeWidth = 3
+	myRoundedRect:setFillColor( 0.5 )
+	myRoundedRect:setStrokeColor( 1, 0, 0 )
+	display.newRoundedRect(  400, 100, 100, 200, 30 )
+
+-- IN Game Menu Button
+local button2 = widget.newButton(
+{
+	
+	left = 0,
+	top = 425, 
+	id = "button1",
+	label = "Main Menu",
+	onPress = MenuButtonEvent,
+	labelColor = { default={ 1, 1, 1 }, over={ 1, 2, 0 } }
+
+	
+}
+)
+
+--On pressing new game in main menu
+local function ComputerGameMenuButtonEvent()
+  Background.isVisible = false
+  Rect1.isVisible = false
+  --Rect2.isVisible = false
+  --Rect3.isVisible = false
+  AMenuButton.isVisible = false
+  
+  NewGame()
+  
+  
+ 
+end
+
+
+
+--On pressing Options in Main Menu
+local function Options()
+
+end
+
+--Main Menu Screen
+function mainMenu()
+
+Background = display.newImage("background.png", 170, 275)
+Background.isVisible = true
+banner = display.newText( "Naughts & Crosses", 150, 70, "Bella", 30)
+
+
+    Rect1 = display.newRoundedRect( 160, 250, 200, 70, 12 )
+	Rect1.strokeWidth = 3
+	Rect1:setFillColor( 0.5 )
+	Rect1:setStrokeColor( 1, 0, 0 )
+	display.newRoundedRect(  400, 100, 100, 200, 30 )
+
+	
+	
+
+--New Game Button in Main Menu
+AMenuButton = widget.newButton(
+{
+	
+	left = 80,
+	top = 225, 
+	id = "Menu1",
+	label = "Play Game",
+	onPress = ComputerGameMenuButtonEvent,
+	labelColor = { default={ 1, 1, 1 }, over={ 1, 2, 0 } }
+	
+}
+)
+
+AMenuButton.isVisible = true
+
+
+  
+ end
+ 
+ local widget = require("widget")
+
+local function handleButtonEvent()
+	
+end
+--New Game Button
+local myRoundedRect = display.newRoundedRect( 235, 450, 100, 50, 12 )
+	myRoundedRect.strokeWidth = 3
+	myRoundedRect:setFillColor( 0.5 )
+	myRoundedRect:setStrokeColor( 1, 0, 0 )
+	display.newRoundedRect(  400, 100, 100, 200, 30 )
+
+
+local button1 = widget.newButton(
+{
+	
+	left = display.contentWidth * 0.45,
+	top = 425, 
+	id = "button1",
+	label = "New Game",
+	onPress = InGameNewGMenuButtonEvent,
+	labelColor = { default={ 1, 1, 1 }, over={ 1, 2, 0 } }
+	
+	
+}
+)
+
+function InGameNewGMenuButtonEvent()
+	NewGame()
+end
+
+--On Pressing Menu Event handler
+local function MenuButtonEvent()
+  mainMenu()
+end
+
+-- In Main Menu Button Rectangle
+local myRoundedRect = display.newRoundedRect( 85, 450, 100, 50, 12 )
+	myRoundedRect.strokeWidth = 3
+	myRoundedRect:setFillColor( 0.5 )
+	myRoundedRect:setStrokeColor( 1, 0, 0 )
+	display.newRoundedRect(  400, 100, 100, 200, 30 )
+
+-- IN Game Menu Button
+local button2 = widget.newButton(
+{
+	
+	left = 0,
+	top = 425, 
+	id = "button1",
+	label = "Main Menu",
+	onPress = MenuButtonEvent,
+	labelColor = { default={ 1, 1, 1 }, over={ 1, 2, 0 } }
+
+	
+}
+)
+
+--On pressing new game in main menu
+local function ComputerGameMenuButtonEvent()
+  Background.isVisible = false
+  Rect1.isVisible = false
+  --Rect2.isVisible = false
+  --Rect3.isVisible = false
+  AMenuButton.isVisible = false
+  
+  NewGame()
+  
+  
+ 
+end
+
+
+
+--On pressing Options in Main Menu
+local function Options()
+
+end
+ 
